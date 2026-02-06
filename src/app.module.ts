@@ -17,7 +17,7 @@ import { AuthModule } from './auth/auth.module';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => {
         const uri = configService.get<string>('MONGO_URI');
-        console.log('MongoDB URI:', uri); // <-- ลองเช็กดูว่าค่าออกมาตามที่ตั้งไว้ใน .env ไหม
+        console.log('MongoDB URI:', uri);
         return {
           uri: uri,
         };
